@@ -1,9 +1,7 @@
 services:
   - docker
 
-before-install:
-
-
 script:
   - echo $TRAVIS_SECURE_ENV_VARS
+  - echo $not_secret
   - docker build -t aaalquis/akamaibaseline .
