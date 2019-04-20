@@ -3,6 +3,11 @@ services:
 
 script:
   - echo $TRAVIS_SECURE_ENV_VARS
-  - bash dockerpush.sh
-  - docker build -t aaalquis/akamaibaseline .
-  - docker push aaalquis/akamaibaseline
+  - bash dockerlogin.sh
+  - commitId=$(git log -1 --pretty=%H)
+  - echo $commitId
+  - NAME=aaalquis/akamaibaseline
+  - echo $NAME
+  - docker build -t $NAME:$commitId .
+  - docker tag $NAME:$commitId latest
+  - docker push $NAME 
