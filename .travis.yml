@@ -3,5 +3,6 @@ services:
 
 script:
   - echo $TRAVIS_SECURE_ENV_VARS
-  - echo $not_secret
+  - travis env set NOTSEC not_secret
+  - echo $NOTSEC
   - docker build -t aaalquis/akamaibaseline .
