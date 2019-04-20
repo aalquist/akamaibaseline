@@ -5,3 +5,4 @@ script:
   - echo $TRAVIS_SECURE_ENV_VARS
   - bash dockerpush.sh
   - docker build -t aaalquis/akamaibaseline .
+  - docker push aaalquis/akamaibaseline
