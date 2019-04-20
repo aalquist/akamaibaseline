@@ -1,7 +1,6 @@
-language: python
-
 services:
   - docker
 
 script:
+  - echo "TRAVIS_SECURE_ENV_VARS = $TRAVIS_SECURE_ENV_VARS"
   - docker build -t aaalquis/akamaibaseline .
