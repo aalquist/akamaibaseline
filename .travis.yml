@@ -9,5 +9,5 @@ script:
   - NAME=aaalquis/akamaibaseline
   - echo $NAME
   - docker build -t $NAME:$commitId .
-  - docker tag latest $NAME:$commitId
+  - docker tag $NAME:$commitId $NAME:latest 
   - docker push $NAME 
