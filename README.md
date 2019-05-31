@@ -6,3 +6,7 @@ A modified version of the Akamai Devops docker image for one-off script developm
 ## Published Docker Image
 
 https://hub.docker.com/r/aaalquis/akamaibaseline
+
+## Change Log:
+- Initial 
+- May 31st 2019 - Forcing docker rebuild to include akamai property cli fix https://github.com/aalquist/cli-property/commit/faa756a6b894ebaa50f013ef7fbe0fb9b3af5d45 
